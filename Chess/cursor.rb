@@ -94,7 +94,9 @@ class Cursor
       @cursor_pos[1] += diff[1]
     end
   end
+  # def toggle_selected(cursor_pos)
 
+  # end
 
 
 end

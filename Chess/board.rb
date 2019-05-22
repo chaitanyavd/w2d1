@@ -5,16 +5,16 @@ class Board
   def initialize
     
     @rows = Array.new(8) { Array.new(8, NullPiece.new ) }
-    # @rows.each do |i|
-    #   (0...8).each do |j|
-    #     if i == 0 || i == 1
-    #       @rows[i][j] = Piece.new(:black)
-    #     elsif i == 6 || i == 7
-    #       @rows[i][j] = Piece.new(:white)
-    #     end
-    #   end
-    # end
-    @rows[0][0] = nil
+    (0...8).each do |i|
+      (0...8).each do |j|
+        if i == 0 || i == 1
+          @rows[i][j] = Piece.new(:black)
+        elsif i == 6 || i == 7
+          @rows[i][j] = Piece.new(:white)
+        end
+      end
+    end
+    # @rows[0][0] = nil
   end
   
   def [](pos)

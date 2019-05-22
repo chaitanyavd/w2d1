@@ -2,11 +2,11 @@ require_relative "board.rb"
 
 
 class Piece
-  # attr_writer pos
-  def initialize
+   attr_reader :color
+  def initialize(color)
     # @pos = pos
     # @board = board
-    # @color = color
+    @color = color
   end
 
 end
@@ -14,7 +14,7 @@ end
 class NullPiece < Piece
 
   def initialize
-    super
+    super(:nil)
   end
 
 

@@ -21,11 +21,13 @@ class Display
       (0...8).each do |j|
         each_tile = []
         piece_color = :black
-        if @board[[i,j]].is_a?(NullPiece)
+        if @board[[i,j]].color == :nil
           each_tile << "   "
           piece_color = :black
-        else
-          each_tile << " B "
+        elsif @board[[i,j]].color == :black
+          each_tile << " M "
+        else @board[[i,j]].color == :yellow
+          each_tile << " W "
         end
         if @cursor.cursor_pos == [i,j]
           print "#{each_tile[0]}".colorize(:color => piece_color, :background => :red)
